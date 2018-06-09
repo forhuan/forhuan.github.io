@@ -311,6 +311,185 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://forhuan.github.io/2018/06/09/hexo-tutorial-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kyler">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/09/hexo-tutorial-2/" itemprop="url">
+                  hexo入门笔记（二）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-06-09 21:39:02 / 修改时间：22:08:21" itemprop="dateCreated datePublished" datetime="2018-06-09T21:39:02+08:00">2018-06-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/09/hexo-tutorial-2/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/09/hexo-tutorial-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/06/09/hexo-tutorial-2/" class="leancloud_visitors" data-flag-title="hexo入门笔记（二）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="1-主题配置"><a href="#1-主题配置" class="headerlink" title="1.主题配置"></a>1.主题配置</h3><p>请查看 <a href="https://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">Next-开始使用</a></p>
+<h3 id="2-阅读次数统计"><a href="#2-阅读次数统计" class="headerlink" title="2.阅读次数统计"></a>2.阅读次数统计</h3><p>请查看 <a href="https://notes.wanghao.work/2015-10-21-为NexT主题添加文章阅读量统计功能.html#%E9%85%8D%E7%BD%AELeanCloud" target="_blank" rel="noopener">为NexT主题添加文章阅读量统计功能</a></p>
+<p>或更安全的 <a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/LEANCLOUD-COUNTER-SECURITY.md" target="_blank" rel="noopener">LEANCLOUD-COUNTER-SECURITY</a></p>
+<h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h3><p>hexo的插件不能全局安装，安装到当前目录就好了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-filter-flowchart</span><br></pre></td></tr></table></figure></p>
+<p>修改网站的<code>_config.yaml</code>，在适当的位置添加如下内容</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">flowchart:</span></span><br><span class="line">  <span class="comment"># raphael:   # optional, the source url of raphael.js</span></span><br><span class="line">  <span class="comment"># flowchart: # optional, the source url of flowchart.js</span></span><br><span class="line"><span class="attr">  options:</span> <span class="comment"># options used for `drawSVG`</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-示例"><a href="#2-示例" class="headerlink" title="2.示例"></a>2.示例</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: Start</span><br><span class="line">op=&gt;operation: Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end: End</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">op-&gt;cond</span><br></pre></td></tr></table></figure>
+<h3 id="3-效果"><a href="#3-效果" class="headerlink" title="3.效果"></a>3.效果</h3><div id="flowchart-0" class="flow-chart"></div>
+
+<p>参考 <a href="https://github.com/bubkoo/hexo-filter-flowchart" target="_blank" rel="noopener">hexo-filter-flowchart</a></p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
+op=>operation: Operation
+cond=>condition: Yes or No?
+e=>end: End
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+op->cond</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://forhuan.github.io/2018/06/05/hexo-tutorial-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -357,12 +536,24 @@
                 
               
 
-              <time title="创建时间：2018-06-05 16:32:48 / 修改时间：17:02:12" itemprop="dateCreated datePublished" datetime="2018-06-05T16:32:48+08:00">2018-06-05</time>
+              <time title="创建时间：2018-06-05 16:32:48" itemprop="dateCreated datePublished" datetime="2018-06-05T16:32:48+08:00">2018-06-05</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-09 21:51:02" itemprop="dateModified" datetime="2018-06-09T21:51:02+08:00">2018-06-09</time>
               
             
           </span>
@@ -682,7 +873,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -690,6 +881,19 @@
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
               
             </nav>
           
