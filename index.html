@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://forhuan.github.io/2018/06/09/hexo-tutorial-2/">
+    <link itemprop="mainEntityOfPage" href="http://forhuan.github.io/2018/06/10/hexo-tutorial-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kyler">
@@ -330,8 +330,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/09/hexo-tutorial-2/" itemprop="url">
-                  hexo入门笔记（二）
+                <a class="post-title-link" href="/2018/06/10/hexo-tutorial-3/" itemprop="url">
+                  hexo 入门笔记（三）
                 </a>
               
             
@@ -357,7 +357,7 @@
                 
               
 
-              <time title="创建时间：2018-06-09 21:39:02 / 修改时间：22:08:21" itemprop="dateCreated datePublished" datetime="2018-06-09T21:39:02+08:00">2018-06-09</time>
+              <time title="创建时间：2018-06-10 11:35:56 / 修改时间：12:58:10" itemprop="dateCreated datePublished" datetime="2018-06-10T11:35:56+08:00">2018-06-10</time>
             
 
             
@@ -367,6 +367,252 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/10/hexo-tutorial-3/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/06/10/hexo-tutorial-3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/06/10/hexo-tutorial-3/" class="leancloud_visitors" data-flag-title="hexo 入门笔记（三）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>添加一个 分类 页面，并在菜单中显示页面链接。</p>
+<ol>
+<li><p>新建一个页面，命名为 <code>categories</code> 。命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑刚新建的页面，将页面的类型设置为 <code>categories</code> ，主题将自动为这个页面显示所有分类。<br> 注意：如果安装了评论系统，默认页面也会带有评论。需要关闭的话，请添加字段<code>comments</code>并将值设置为<code>false</code>。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2018-06-06 11:29:40</span><br><span class="line">type: "categories"</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在菜单中添加链接。编辑主题的 <code>_config.yml</code> ，将 <code>menu</code> 中的 <code>categories: /categories</code> 注释去掉，如下:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>添加一个标签页面，并在菜单中显示页面链接。</p>
+<ol>
+<li>新建一个页面，命名为 <code>tags</code> 。命令如下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>编辑刚新建的页面，将页面的类型设置为 <code>tags</code> ，主题将自动为这个页面显示标签云。<br> 注意：如果安装了评论系统，默认页面也会带有评论。需要关闭的话，请添加字段 comments 并将值设置为 false。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: All tags</span><br><span class="line">date: 2018-06-06 11:30:34</span><br><span class="line">type: "tags"</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在菜单中添加链接。编辑主题的 <code>_config.yml</code> ，添加 <code>tags</code> 到 <code>menu</code> 中，如下:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>新建一个 <code>about</code> 页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"about"</span></span><br></pre></td></tr></table></figure></p>
+<p>菜单显示 <code>about</code> 链接，在主题的 <code>_configy.yml</code> 设置中将 <code>menu</code> 中 <code>about</code> 前面的注释去掉即可。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about</span></span><br></pre></td></tr></table></figure>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: hexo 入门笔记（三）</span><br><span class="line">date: 2018-06-10 11:35:56</span><br><span class="line">categories: hexo</span><br><span class="line">tags:</span><br><span class="line"><span class="code">      - hexo</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="关于排版"><a href="#关于排版" class="headerlink" title="关于排版"></a>关于排版</h2><p>在 hexo 中，序号之间插入代码块(不用缩进)不会打断序号。这个很迷。<br><img src="/2018/06/10/hexo-tutorial-3/1.png" alt="1.png"></p>
+<p>效果如下</p>
+<ol>
+<li><p>a</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: All tags</span><br><span class="line">date: 2018-06-06 11:30:34</span><br><span class="line">type: "tags"</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>b</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://forhuan.github.io/2018/06/09/hexo-tutorial-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kyler">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/09/hexo-tutorial-2/" itemprop="url">
+                  hexo 入门笔记（二）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-06-09 21:39:02" itemprop="dateCreated datePublished" datetime="2018-06-09T21:39:02+08:00">2018-06-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-06-10 10:51:33" itemprop="dateModified" datetime="2018-06-10T10:51:33+08:00">2018-06-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -385,7 +631,7 @@
 
           
           
-             <span id="/2018/06/09/hexo-tutorial-2/" class="leancloud_visitors" data-flag-title="hexo入门笔记（二）">
+             <span id="/2018/06/09/hexo-tutorial-2/" class="leancloud_visitors" data-flag-title="hexo 入门笔记（二）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,6 +667,8 @@
             <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="1-主题配置"><a href="#1-主题配置" class="headerlink" title="1.主题配置"></a>1.主题配置</h3><p>请查看 <a href="https://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">Next-开始使用</a></p>
 <h3 id="2-阅读次数统计"><a href="#2-阅读次数统计" class="headerlink" title="2.阅读次数统计"></a>2.阅读次数统计</h3><p>请查看 <a href="https://notes.wanghao.work/2015-10-21-为NexT主题添加文章阅读量统计功能.html#%E9%85%8D%E7%BD%AELeanCloud" target="_blank" rel="noopener">为NexT主题添加文章阅读量统计功能</a></p>
 <p>或更安全的 <a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/LEANCLOUD-COUNTER-SECURITY.md" target="_blank" rel="noopener">LEANCLOUD-COUNTER-SECURITY</a></p>
+<h3 id="3-评论系统"><a href="#3-评论系统" class="headerlink" title="3.评论系统"></a>3.评论系统</h3><p>请查看 <a href="https://ioliu.cn/2017/add-valine-comments-to-your-blog/" target="_blank" rel="noopener">Valine – 一款极简的评论系统</a></p>
+<p>官网 <a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a></p>
 <h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h3><p>hexo的插件不能全局安装，安装到当前目录就好了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-filter-flowchart</span><br></pre></td></tr></table></figure></p>
 <p>修改网站的<code>_config.yaml</code>，在适当的位置添加如下内容</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">flowchart:</span></span><br><span class="line">  <span class="comment"># raphael:   # optional, the source url of raphael.js</span></span><br><span class="line">  <span class="comment"># flowchart: # optional, the source url of flowchart.js</span></span><br><span class="line"><span class="attr">  options:</span> <span class="comment"># options used for `drawSVG`</span></span><br></pre></td></tr></table></figure>
@@ -553,11 +801,29 @@ op->cond</textarea><textarea id="flowchart-0-options" style="display: none">{"sc
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-09 21:51:02" itemprop="dateModified" datetime="2018-06-09T21:51:02+08:00">2018-06-09</time>
+                <time title="修改时间：2018-06-10 11:01:47" itemprop="dateModified" datetime="2018-06-10T11:01:47+08:00">2018-06-10</time>
               
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -873,12 +1139,25 @@ op->cond</textarea><textarea id="flowchart-0-options" style="display: none">{"sc
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
               
 
               
