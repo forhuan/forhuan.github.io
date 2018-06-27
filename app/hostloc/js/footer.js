@@ -1,4 +1,4 @@
-document.oncontextmenu = function () { return false; };
+//document.oncontextmenu = function () { return false; };
 document.onkeydown = function () { return false; };
 var _hmt = _hmt || [];
 (function() {
